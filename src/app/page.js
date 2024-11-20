@@ -54,8 +54,8 @@ export default function Home() {
 
         <div className="bg-white/50 backdrop-blur-sm rounded-lg p-8 shadow-lg">
           <p className="text-green-600 mb-4">
-            We're working hard to bring you the finest organic products. Stay
-            tuned for our launch!
+            We&apos;re working hard to bring you the finest organic products.
+            Stay tuned for our launch!
           </p>
 
           <form
