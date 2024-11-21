@@ -1,18 +1,15 @@
 import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/Nav";
-import localFont from "next/font/local";
+import { Merriweather } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+// Import Merriweather Google Font
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+  weight: ["300", "400", "700", "900"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -31,9 +28,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="drk">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-white to-green-300 text-green-800 dark:from-[#000000] dark:to-[#0b1833c5] dark:text-green-200`}
+        className={`${merriweather.variable} antialiased bg-gradient-to-br from-green-50 to-green-300 text-green-800 dark:from-[#000000] dark:to-[#0b1833c5] dark:text-green-200`}
       >
         <NavBar />
         <CustomCursor />

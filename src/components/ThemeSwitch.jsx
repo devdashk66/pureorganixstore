@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const spring = {
     type: "spring",
     stiffness: 700,

@@ -103,7 +103,7 @@ const MobileMenu = ({ show, onShow }) => {
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
             onClick={() => onShow()}
-            className="absolute inset-0 bg-black dark:bg-gray-600/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black dark:bg-gray-600/50 "
           />
 
           {/* Menu Content */}
@@ -122,7 +122,7 @@ const MobileMenu = ({ show, onShow }) => {
                 <button
                   onClick={() => onShow()}
                   aria-label="Close menu"
-                  className="bg-gray-200 dark:bg-black bg-opacity-50 p-1 rounded-md outline-none 
+                  className="bg-gray-200 dark:bg-black bg-opacity-50 dark:bg-opacity-50 p-1 rounded-md outline-none 
                            hover:bg-opacity-70 focus:ring-2 focus:ring-primary
                            transition-all duration-200"
                 >
@@ -143,7 +143,7 @@ const MobileMenu = ({ show, onShow }) => {
                     >
                       <Link
                         href={href}
-                        className={`transition-colors duration-200 block text-gray-800 dark:text-white hover:text-primary
+                        className={`transition-colors duration-200 block text-gray-800 dark:text-white hover:text-primary dark:hover:text-primary-light
                           ${
                             (pathname === "/" && href === "/") ||
                             pathname === href
@@ -163,7 +163,7 @@ const MobileMenu = ({ show, onShow }) => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mt-10 text-sm text-gray-600 dark:text-white dark:opacity-40 leading-6"
+                className="mt-10 text-sm text-text-light dark:text-text-dark leading-6"
               >
                 Pure Organix offers premium organic products sourced directly
                 from nature, ensuring purity and quality in every drop. Discover
@@ -177,7 +177,7 @@ const MobileMenu = ({ show, onShow }) => {
                 transition={{ delay: 0.5 }}
                 className="mt-10 pb-5"
               >
-                <h3 className="mb-4 text-sm border-b border-primary border-opacity-20 pb-3 text-gray-800 dark:text-white">
+                <h3 className="mb-4 text-sm border-b border-primary border-opacity-20 pb-3 dark:text-heading-dark  text-heading-light">
                   Follow Us
                 </h3>
                 <div className="flex justify-between gap-5 text-2xl text-gray-500 dark:text-gray-400">
