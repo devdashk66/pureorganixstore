@@ -6,7 +6,7 @@ import { FaLeaf } from "react-icons/fa6";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex pt-20 justify-center bg-gradient-to-b from-green-50 to-white dark:from-zinc-950 dark:to-zinc-900 px-4">
+    <div className="min-h-screen flex pt-20 justify-center  px-4">
       <div className="text-center">
         {/* Animated Leaf Icon */}
         <motion.div
