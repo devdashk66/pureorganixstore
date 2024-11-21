@@ -1,3 +1,4 @@
+import CustomCursor from "@/components/CustomCursor";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -32,7 +33,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-white to-green-300 text-green-800 dark:from-[#000000] dark:to-[#0b1833c5] dark:text-green-200`}
       >
-        {children}
+        <CustomCursor />
+        <main>{children}</main>
       </body>
     </html>
   );
