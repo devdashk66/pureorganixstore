@@ -106,10 +106,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      <footer className="mt-16 text-sm text-green-600 dark:text-green-400">
-        © {new Date().getFullYear()} Pure Organix Store. All rights reserved.
-      </footer>
     </div>
   );
 }

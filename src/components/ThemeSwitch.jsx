@@ -13,7 +13,7 @@ const ThemeSwitch = () => {
 
   // Initialize theme from localStorage on component mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
+    const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
     setTheme(savedTheme);
   }, [setTheme]);
