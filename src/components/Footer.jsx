@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -64,7 +65,7 @@ const Footer = () => {
               href="#"
               className="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light"
             >
-              <FaTwitter className="h-6 w-6" />
+              <FaTiktok className="h-6 w-6" />
             </a>
             <a
               href="#"

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi";
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const spring = {
     type: "spring",
     stiffness: 700,
@@ -13,7 +13,7 @@ const ThemeSwitch = () => {
 
   // Initialize theme from localStorage on component mount
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    const savedTheme = localStorage.getItem("theme") || "light";
     document.documentElement.classList.toggle("dark", savedTheme === "dark");
     setTheme(savedTheme);
   }, [setTheme]);

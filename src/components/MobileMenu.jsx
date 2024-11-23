@@ -61,10 +61,10 @@ const SOCIAL_LINKS = [
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
   { href: "/products", label: "Products" },
-  { href: "/login", label: "Login" },
+  { href: "/cart", label: "Cart" },
+  { href: "/checkout", label: "Checkout" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const MobileMenu = ({ show, onShow }) => {

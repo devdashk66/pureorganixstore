@@ -15,7 +15,7 @@ export default function CustomCursor() {
 
   return (
     <div
-      className="pointer-events-none fixed w-64 h-64 rounded-full bg-gradient-to-br from-primary/50 to-primary/50 dark:from-primary/30 dark:to-primary/30 blur-3xl z-50 animate-pulse"
+      className="hidden md:block pointer-events-none fixed w-64 h-64 rounded-full bg-gradient-to-br from-primary/50 to-primary/50 dark:from-primary/30 dark:to-primary/30 blur-3xl z-50 animate-pulse"
       style={{
         transform: `translate(${cursorBlob.x - 128}px, ${
           cursorBlob.y - 128

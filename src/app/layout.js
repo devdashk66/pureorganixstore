@@ -1,6 +1,7 @@
 import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/Nav";
+import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Merriweather } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`${merriweather.variable} antialiased bg-gradient-to-br from-green-50 to-green-300 text-green-800 dark:from-[#000000] dark:to-[#0b1833c5] dark:text-green-200`}
+        className={`${merriweather.className} antialiased bg-gradient-to-br from-green-50 to-green-200 text-green-800 dark:from-[#000000] dark:to-[#0b1833c5] dark:text-green-200`}
       >
         <NextTopLoader
           color="#22c55e"
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
           showSpinner={false}
         />
         <NavBar />
+        <FloatingNav />
         <CustomCursor />
         <main>{children}</main>
         <Footer />
