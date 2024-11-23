@@ -11,12 +11,37 @@ const ThemeSwitch = () => {
     damping: 30,
   };
 
-  // Initialize theme from localStorage on component mount
+  // Modified useEffect to check system preferences
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
-    setTheme(savedTheme);
-  }, [setTheme]);
+    // Check for saved theme first, then fallback to system preference
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    } else {
+      // Check system preference
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      setTheme(systemTheme);
+      document.documentElement.classList.toggle("dark", systemTheme === "dark");
+    }
+
+    // Add listener for system theme changes
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handleChange = (e) => {
+      if (!localStorage.getItem("theme")) {
+        const newTheme = e.matches ? "dark" : "light";
+        setTheme(newTheme);
+        document.documentElement.classList.toggle("dark", newTheme === "dark");
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
 
   const handleToggle = () => {
     const newTheme = theme === "light" ? "dark" : "light";

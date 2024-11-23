@@ -50,7 +50,7 @@ const Hero = () => {
 
   return (
     <section className="relative bg-gradient-to-b from-primary/10 via-white to-transparent dark:from-black/10 dark:via-primary/5 dark:to-transparent py-12 sm:py-16 md:py-20 overflow-x-hidden">
-      <div className="absolute inset-0 opacity-30 bg-[url('/noise.png')] pointer-events-none"></div>
+      <div className="absolute inset-0 opacity-30  pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-3xl mx-auto text-center space-y-8">
