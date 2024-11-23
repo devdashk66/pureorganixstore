@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaBars, FaLeaf } from "react-icons/fa6";
+import Cart from "./Cart";
 import MobileMenu from "./MobileMenu";
 import ThemeSwitch from "./ThemeSwitch";
 
@@ -13,7 +14,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="container mx-auto py-3">
+    <nav className="w-full mx-auto p-3">
       <section className="flex items-center justify-between mx-6 relative border-b border-primary border-opacity-20">
         <Link className="py-1" href="/">
           <FaLeaf className="w-12 h-12 text-primary dark:text-primary-light" />
@@ -21,8 +22,8 @@ const NavBar = () => {
         <div className="opacity-0">
           <ThemeSwitch />
         </div>
-        <div className="flex gap-3 items-center">
-          <span className="uppercase text-primary tracking-widest">Menu</span>
+        <div className="flex gap-3 items-center justify-between">
+          <Cart />
           <button
             onClick={handleShow}
             aria-expanded={show}
