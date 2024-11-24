@@ -49,7 +49,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-b from-primary/10 via-white to-transparent dark:from-black/10 dark:via-primary/5 dark:to-transparent py-12 sm:py-16 md:py-20 overflow-x-hidden">
+    <section className="relative bg-gradient-to-b from-primary/10 via-white to-transparent dark:from-black/10 dark:via-primary/5 dark:to-transparent py-24 sm:py-28 md:py-32 overflow-x-hidden">
       <div className="absolute inset-0 opacity-30  pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative">
@@ -57,7 +57,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 1 }}
             animate={controls}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-heading-light dark:text-heading-dark min-h-[80px] sm:min-h-[100px] md:min-h-[120px] leading-tight md:leading-snug"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-heading-light dark:text-heading-dark min-h-[80px] sm:min-h-[100px] md:min-h-[120px] leading-tight md:leading-snug"
           >
             {titles[currentTitleIndex].split("").map((char, index) => (
               <motion.span

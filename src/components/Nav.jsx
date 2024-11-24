@@ -1,7 +1,8 @@
 "use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { FaBars, FaLeaf } from "react-icons/fa6";
+import { FaBars } from "react-icons/fa6";
 import Cart from "./Cart";
 import MobileMenu from "./MobileMenu";
 import ThemeSwitch from "./ThemeSwitch";
@@ -14,11 +15,21 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="w-full mx-auto p-3">
+    <motion.nav
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-full mx-auto p-3"
+    >
       <section className="flex items-center justify-between mx-6 relative border-b border-primary border-opacity-20">
-        <Link className="py-1" href="/">
-          <FaLeaf className="w-12 h-12 text-primary dark:text-primary-light" />
-        </Link>
+        <div>
+          <Link
+            className="py-1 text-2xl md:text-3xl font-bold text-heading-light dark:text-heading-dark"
+            href="/"
+          >
+            Organix
+          </Link>
+        </div>
         <div className="opacity-0">
           <ThemeSwitch />
         </div>
@@ -37,7 +48,7 @@ const NavBar = () => {
       </section>
 
       <MobileMenu id="mobile-menu" show={show} onShow={handleShow} />
-    </nav>
+    </motion.nav>
   );
 };
 

@@ -9,7 +9,7 @@ const AnimatedTitle = ({ title, subtitle, accent = "primary" }) => {
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 0.1, scale: 1 }}
         transition={{ duration: 0.7 }}
-        className={`absolute inset-0 text-7xl sm:text-8xl font-bold text-${accent}/10 flex items-center justify-center -z-10`}
+        className={`absolute inset-0 text-6xl sm:text-7xl md:text-8xl font-bold text-${accent}/10 flex items-center justify-center -z-10`}
       >
         {subtitle}
       </motion.span>
