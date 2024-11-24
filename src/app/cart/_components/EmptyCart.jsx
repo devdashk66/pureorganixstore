@@ -47,8 +47,8 @@ const EmptyCart = () => {
           Your Organic Basket is Empty
         </h2>
         <p className="text-sm sm:text-base text-primary/60 max-w-md mx-auto mb-8">
-          Looks like you haven't added any organic goodness to your basket yet.
-          Let's fill it with fresh, healthy products!
+          Looks like you haven&apos;t added any organic goodness to your basket
+          yet. Let&apos;s fill it with fresh, healthy products!
         </p>
       </motion.div>
 
