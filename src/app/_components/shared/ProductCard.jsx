@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ProductCard = ({ product, index }) => {
   return (
@@ -37,29 +38,34 @@ const ProductCard = ({ product, index }) => {
         </div>
 
         {/* Product Image Placeholder */}
-        <div
-          className="relative h-48 mb-4 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10
+        <Link href={`/products/${product.id}`}>
+          <div
+            className="relative h-48 mb-4 rounded-xl bg-gradient-to-br from-primary/5 to-primary/10
                       group-hover:from-primary/10 group-hover:to-primary/20 transition-all duration-300 overflow-hidden"
-        >
-          <motion.div
-            className="absolute inset-0 bg-white/5 rounded-xl"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          />
-          <img
-            src="https://www.24mantra.com/wp-content/uploads/2020/04/How-organic-honey-is-different-from-others.jpg"
-            alt="Product Name"
-          />
-        </div>
+          >
+            <motion.div
+              className="absolute z-20 inset-0 bg-white/5 rounded-xl"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            />
+            <img
+              src="https://www.24mantra.com/wp-content/uploads/2020/04/How-organic-honey-is-different-from-others.jpg"
+              alt="Product Name"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </Link>
 
         {/* Product Info */}
         <div className="space-y-3">
-          <motion.h3
-            whileHover={{ x: 5 }}
-            className="text-lg font-semibold text-primary dark:text-primary"
-          >
-            {product.name}
-          </motion.h3>
+          <Link href={`/products/${product.id}`}>
+            <motion.h3
+              whileHover={{ x: 5 }}
+              className="text-lg font-semibold text-primary dark:text-primary"
+            >
+              {product.name}
+            </motion.h3>
+          </Link>
 
           <p className="text-primary/60 dark:text-primary/60 text-sm">
             {product.category}
@@ -114,12 +120,6 @@ const ProductCard = ({ product, index }) => {
                 </motion.div>
               </div>
             </motion.button>
-
-            {/* Decorative gradient */}
-            <div
-              className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-purple-500/50 
-                          rounded-2xl blur opacity-0 group-hover:opacity-15 transition-opacity duration-300 z-10"
-            />
           </div>
         </div>
       </div>
