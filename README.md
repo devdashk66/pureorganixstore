@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Pure Organix Store
 
-## Getting Started
+Welcome to the **Pure Organix Store**! This is a web application designed to provide users with a seamless shopping experience for organic products. Users can browse products, create accounts, and manage their shopping carts.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- User registration and login
+- Product browsing with categories
+- Add to cart functionality
+- Responsive design for mobile and desktop
+- Toast notifications for user actions
+- Animated UI components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Technologies Used
 
-## Learn More
+- **Frontend**:
 
-To learn more about Next.js, take a look at the following resources:
+  - React
+  - Next.js
+  - Tailwind CSS
+  - Framer Motion (for animations)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **State Management**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  - React Context API
 
-## Deploy on Vercel
+- **Routing**:
+  - Next.js routing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To get started with the Pure Organix Store, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/devdashk66/pureorganixstore.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd pure-organix-store
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:3000`.
+
+## Usage
+
+- **Register**: Create a new account by navigating to the registration page.
+- **Login**: Access your account using your credentials.
+- **Browse Products**: Explore the available organic products.
+- **Add to Cart**: Click the "Add to Cart" button to add items to your shopping cart.
+- **View Cart**: Check your cart to see the items you've added.
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request.
+
+1. Fork the repository
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Thank you for checking out the Pure Organix Store! We hope you enjoy shopping for organic products.
