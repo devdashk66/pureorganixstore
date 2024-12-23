@@ -19,13 +19,14 @@ export const FloatingNav = ({ className }) => {
       link: "/",
     },
     {
+      name: "Products",
+      link: "/products",
+    },
+    {
       name: "Blog",
       link: "/blog",
     },
-    {
-      name: "Projects",
-      link: "/projects",
-    },
+
     {
       name: "About",
       link: "/about",

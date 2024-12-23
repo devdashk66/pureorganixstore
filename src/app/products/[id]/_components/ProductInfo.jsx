@@ -1,9 +1,12 @@
 "use client";
+import ToastNotification from "@/app/_components/shared/ToastNotification";
+import { useCart } from "@/app/context/CartContext";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { MdAdd, MdRemove } from "react-icons/md";
 
 const ProductInfo = ({ product }) => {
+  const { addToCart, toastMessage, isToastVisible } = useCart();
   const [quantity, setQuantity] = useState(1);
 
   return (
@@ -49,6 +52,7 @@ const ProductInfo = ({ product }) => {
 
       {/* Add to Cart Button */}
       <motion.button
+        onClick={addToCart}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className="w-full py-3 bg-primary text-white rounded-2xl text-lg font-medium
@@ -56,6 +60,9 @@ const ProductInfo = ({ product }) => {
       >
         Add to Cart
       </motion.button>
+
+      {/* Toast Notification */}
+      <ToastNotification message={toastMessage} isVisible={isToastVisible} />
     </motion.div>
   );
 };

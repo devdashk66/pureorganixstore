@@ -17,9 +17,9 @@ const ProductPage = ({ params }) => {
       "Fresh and organic avocados sourced directly from local farmers. Rich in healthy fats and perfect for your daily nutrition.",
     category: "Fruits",
     images: [
-      "/images/products/avocado-1.jpg",
-      "/images/products/avocado-2.jpg",
-      "/images/products/avocado-3.jpg",
+      "https://www.gardentech.com/-/media/project/oneweb/gardentech/images/blog/how-to-grow-your-own-tasty-strawberries/strawberries-header-og.jpg",
+      "https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2022/04/pexels-antonio-filigno-8538296-1024x657.jpg",
+      "https://nutritionsource.hsph.harvard.edu/wp-content/uploads/2024/11/AdobeStock_354060824.jpeg",
     ],
     details: [
       "100% Organic",

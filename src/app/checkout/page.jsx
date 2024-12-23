@@ -3,6 +3,11 @@ import OrderSummary from "./_components/OrderSummary";
 import PaymentForm from "./_components/PaymentForm";
 import ShippingForm from "./_components/ShippingForm";
 
+export const metadata = {
+  title: "Checkout | Pure Organix",
+  description: "Complete your purchase securely with Pure Organix",
+};
+
 const CheckoutPage = () => {
   // Example order items
   const orderItems = [

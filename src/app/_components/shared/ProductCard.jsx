@@ -1,8 +1,12 @@
 "use client";
+import { useCart } from "@/app/context/CartContext";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import ToastNotification from "./ToastNotification";
 
 const ProductCard = ({ product, index }) => {
+  const { addToCart, cartCount, toastMessage, isToastVisible } = useCart();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -49,7 +53,7 @@ const ProductCard = ({ product, index }) => {
               transition={{ duration: 0.3 }}
             />
             <img
-              src="https://www.24mantra.com/wp-content/uploads/2020/04/How-organic-honey-is-different-from-others.jpg"
+              src={product.image}
               alt="Product Name"
               className="w-full h-full object-cover"
             />
@@ -66,10 +70,11 @@ const ProductCard = ({ product, index }) => {
               {product.name}
             </motion.h3>
           </Link>
-
-          <p className="text-primary/60 dark:text-primary/60 text-sm">
-            {product.category}
-          </p>
+          <Link href={`/products?category=${product.category}`}>
+            <p className="text-primary/60 dark:text-primary/60 text-sm">
+              {product.category}
+            </p>
+          </Link>
 
           {/* Price Section with Add to Cart */}
           <div className="flex items-center justify-between gap-2">
@@ -84,6 +89,7 @@ const ProductCard = ({ product, index }) => {
 
             {/* Add to Cart Button with Slide Effect */}
             <motion.button
+              onClick={addToCart}
               initial="initial"
               whileHover="hover"
               className="px-4 py-1.5 bg-primary/80 hover:bg-primary text-white 
@@ -123,6 +129,9 @@ const ProductCard = ({ product, index }) => {
           </div>
         </div>
       </div>
+
+      {/* Toast Notification */}
+      <ToastNotification message={toastMessage} isVisible={isToastVisible} />
     </motion.div>
   );
 };

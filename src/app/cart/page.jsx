@@ -3,6 +3,13 @@ import CartItem from "./_components/CartItem";
 import CheckoutSummary from "./_components/CheckoutSummary";
 import EmptyCart from "./_components/EmptyCart";
 
+// Add metadata export
+export const metadata = {
+  title: "Shopping Cart | Pure Organix",
+  description:
+    "View and manage your shopping cart items from our organic product selection.",
+};
+
 const CartPage = () => {
   // Example cart items (replace with your actual cart data)
   const cartItems = [

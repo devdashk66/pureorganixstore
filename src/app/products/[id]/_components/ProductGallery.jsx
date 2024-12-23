@@ -1,7 +1,6 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from "react";
 
 const ProductGallery = ({ images, name }) => {
   const [selectedImage, setSelectedImage] = useState(0);
@@ -13,7 +12,7 @@ const ProductGallery = ({ images, name }) => {
       className="space-y-4"
     >
       <div className="aspect-square rounded-2xl overflow-hidden bg-primary/5">
-        <Image
+        <img
           src={images[selectedImage]}
           alt={name}
           width={600}
@@ -28,9 +27,13 @@ const ProductGallery = ({ images, name }) => {
             onClick={() => setSelectedImage(index)}
             className={`aspect-square w-20 rounded-xl overflow-hidden border-2 
                      transition-colors duration-300
-                     ${selectedImage === index ? 'border-primary' : 'border-transparent'}`}
+                     ${
+                       selectedImage === index
+                         ? "border-primary"
+                         : "border-transparent"
+                     }`}
           >
-            <Image
+            <img
               src={image}
               alt={`${name} ${index + 1}`}
               width={80}
@@ -44,4 +47,4 @@ const ProductGallery = ({ images, name }) => {
   );
 };
 
-export default ProductGallery; 
+export default ProductGallery;

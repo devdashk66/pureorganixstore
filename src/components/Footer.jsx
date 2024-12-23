@@ -28,12 +28,7 @@ const Footer = () => {
             >
               About Us
             </Link>
-            <Link
-              href="/shop"
-              className="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light"
-            >
-              Shop
-            </Link>
+
             <Link
               href="/contact"
               className="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light"
@@ -45,6 +40,12 @@ const Footer = () => {
               className="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light"
             >
               Blog
+            </Link>
+            <Link
+              href="/login"
+              className="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light"
+            >
+              Login
             </Link>
           </div>
         </div>

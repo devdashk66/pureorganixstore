@@ -1,5 +1,5 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { MdClose } from "react-icons/md";
 
 const MobileFilterDrawer = ({ isOpen, onClose, children, sortDropdown }) => {
@@ -36,11 +36,15 @@ const MobileFilterDrawer = ({ isOpen, onClose, children, sortDropdown }) => {
               </button>
 
               {/* Title */}
-              <h2 className="text-xl font-semibold text-primary mb-6">Filters</h2>
+              <h2 className="text-xl font-semibold text-primary mb-6">
+                Filters
+              </h2>
 
               {/* Sort Dropdown */}
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-primary mb-3">Sort By</h3>
+                <h3 className="text-lg font-semibold text-primary mb-3">
+                  Sort By
+                </h3>
                 {sortDropdown}
               </div>
 
@@ -57,4 +61,4 @@ const MobileFilterDrawer = ({ isOpen, onClose, children, sortDropdown }) => {
   );
 };
 
-export default MobileFilterDrawer; 
+export default MobileFilterDrawer;
